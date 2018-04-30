@@ -77,4 +77,4 @@ and here http://docs.godotengine.org/en/3.0/development/compiling/compiling_with
 
 1. Open VS2017 x64 Native Tools Command Prompt
 2. cd to c:/godot 
-3. Type 'scons -j6 p=windows vsproj=yes tools=yes module_mono_enabled=yes mono_glue=no'
+3. Type 'scons -j6 p=windows vsproj=yes tools=yes module_mono_enabled=yes mono_glue=no' 
