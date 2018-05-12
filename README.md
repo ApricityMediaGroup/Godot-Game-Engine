@@ -41,5 +41,6 @@ and here http://docs.godotengine.org/en/3.0/development/compiling/compiling_with
 
 1. Open VS2017 x64 Native Tools Command Prompt
 2. cd to `c:/godot`
-3. Type `scons -j6 p=windows vsproj=yes tools=yes module_mono_enabled=yes mono_glue=no`
-4. In the VS project, Go to properties > Debugging and pass `"--generate-mono-glue C:\godot\modules\mono\glue"`
+3. Build a temporary binary, type `scons -j6 p=windows tools=yes module_mono_enabled=yes mono_glue=no`
+4. Generate the "glue" using that exe, type in cmd `C:\godot\bin\godot.windows.tools.64.mono.exe --generate-mono-glue C:\godot\modules\mono\glue`
+5. Now finally build normally, type `scons -j6 p=windows vsproj=yes tools=yes module_mono_enabled=yes`

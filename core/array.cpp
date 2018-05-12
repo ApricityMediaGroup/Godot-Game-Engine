@@ -48,7 +48,7 @@ void Array::_ref(const Array &p_from) const {
 	ERR_FAIL_COND(!_fp); // should NOT happen.
 
 	if (_fp == _p)
-		return; // whatever it is, nothing to do here move along
+		return; // move along
 
 	bool success = _fp->refcount.ref();
 
@@ -67,6 +67,7 @@ void Array::_unref() const {
 	if (_p->refcount.unref()) {
 		memdelete(_p);
 	}
+	_p = NULL;
 	_p = NULL;
 }
 

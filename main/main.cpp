@@ -142,7 +142,7 @@ void initialize_physics() {
 	/// 3D Physics Server
 	physics_server = PhysicsServerManager::new_server(ProjectSettings::get_singleton()->get(PhysicsServerManager::setting_property_name));
 	if (!physics_server) {
-		// Physics server not found, Use the default physics
+		// Physics server not found: Use the default physics
 		physics_server = PhysicsServerManager::new_default_server();
 	}
 	ERR_FAIL_COND(!physics_server);
