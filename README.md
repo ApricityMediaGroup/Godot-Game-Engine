@@ -45,3 +45,9 @@ and here http://docs.godotengine.org/en/3.0/development/compiling/compiling_with
 3. Build a temporary binary, type `scons -j6 p=windows tools=yes module_mono_enabled=yes mono_glue=no`
 4. Generate the "glue" using that exe, type in cmd `C:\godot\bin\godot.windows.tools.64.mono.exe --generate-mono-glue C:\godot\modules\mono\glue`
 5. Now finally build normally, type `scons -j6 p=windows vsproj=yes tools=yes module_mono_enabled=yes`
+
+### Custom Export Template
+Open cmd
+1. `cd c:/godot`
+2. `call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\VsDevCmd.bat" -arch=x64`
+3. `scons -j6 platform=windows tools=no module_mono_enabled=yes target=release`
